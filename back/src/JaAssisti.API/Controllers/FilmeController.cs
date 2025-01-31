@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
+using JaAssisti.API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JaAssisti.API.Controllers
@@ -11,27 +12,40 @@ namespace JaAssisti.API.Controllers
     public class FilmeController : ControllerBase
     {
 
+        public IEnumerable<Filme> Filmes = new List<Filme>() { 
+                new Filme(1),
+                new Filme(2),
+                new Filme(3)
+            };
+         
+
         [HttpGet]
-        public string Get()
+        public IEnumerable<Filme> Get()
         {
-            return "Meu primeiro método get";
+            return Filmes;
+        }
+
+        [HttpGet("{id}")]
+        public Filme Get(int id)
+        {
+            return Filmes.FirstOrDefault(film => film.Id == id);
         }
 
         [HttpPost]
-        public string Post()
+        public IEnumerable<Filme> Post(Filme filme)
         {
-            return "Meu primeiro método post";
+            return Filmes.Append<Filme>(filme);
         }
 
 
-        [HttpPut]
-        public string Put()
+        [HttpPut("{id}")]
+        public string Put(int id)
         {
             return "Meu primeiro método put";
         }
 
-        [HttpDelete]
-        public string Delete()
+        [HttpDelete("{id}")]
+        public string Delete(int id)
         {
             return "Meu primeiro método Delete";
         }
