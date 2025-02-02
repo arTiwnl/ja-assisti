@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JaAssisti.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26b69b12149feb2f53ee4753f1806ad631ed1be8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42568bb34de47a98c9f2c302142c5ce327a38b24")]
 [assembly: System.Reflection.AssemblyProductAttribute("JaAssisti.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JaAssisti.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

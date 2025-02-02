@@ -14,7 +14,7 @@ namespace JaAssisti.API.Models
 
         public string Descricao { get; set; }
 
-        public string Nota { get; set; }
+        public Nota Nota { get; set; }
 
 
 
