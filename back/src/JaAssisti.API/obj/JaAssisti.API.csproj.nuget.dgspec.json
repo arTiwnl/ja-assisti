@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj": {}
+    "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj": {
+    "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
+        "projectUniqueName": "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
         "projectName": "JaAssisti.API",
-        "projectPath": "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
+        "projectPath": "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
         "packagesPath": "C:\\Users\\Arthur Carvalho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\obj\\",
+        "outputPath": "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -38,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net5.0": {
@@ -71,7 +77,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -83,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

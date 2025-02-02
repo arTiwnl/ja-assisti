@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks; 
+using System.Threading.Tasks;
+using JaAssisti.API.Data;
 using JaAssisti.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using SQLitePCL;
 
 namespace JaAssisti.API.Controllers
 {
@@ -11,43 +13,63 @@ namespace JaAssisti.API.Controllers
     [Route("api/[controller]")]
     public class FilmeController : ControllerBase
     {
+        private readonly DataContext _context;
 
-        public IEnumerable<Filme> Filmes = new List<Filme>() { 
-                new Filme(1),
-                new Filme(2),
-                new Filme(3)
-            };
-         
+         public FilmeController(DataContext context)
+         {
+            _context = context;
+            
+         }
+
 
         [HttpGet]
         public IEnumerable<Filme> Get()
         {
-            return Filmes;
+            return _context.Filmes;
         }
 
         [HttpGet("{id}")]
         public Filme Get(int id)
         {
-            return Filmes.FirstOrDefault(film => film.Id == id);
+            return _context.Filmes.FirstOrDefault(film => film.Id == id);
         }
 
         [HttpPost]
         public IEnumerable<Filme> Post(Filme filme)
         {
-            return Filmes.Append<Filme>(filme);
+            _context.Filmes.Add(filme);
+            if (_context.SaveChanges() > 0)
+                return _context.Filmes;
+            else
+                throw new Exception ("Filme não adicionado");
+
         }
 
 
         [HttpPut("{id}")]
-        public string Put(int id)
+        public Filme Put(int id, Filme filme)
         {
-            return "Meu primeiro método put";
+            if (filme. Id != id) throw new Exception ("Você está tentando atualizar o filme errado");
+       
+            _context.Update(filme);
+            if (_context.SaveChanges() > 0)
+                return _context.Filmes.FirstOrDefault(film => film.Id == id);
+            else
+                return new Filme();
         }
 
         [HttpDelete("{id}")]
-        public string Delete(int id)
+        public bool Delete(int id)
         {
-            return "Meu primeiro método Delete";
+            
+            var filme = _context.Filmes.FirstOrDefault(film => film.Id == id);
+            if (filme == null)
+                throw new Exception ("Você está tentando deletar uma atividade inexistente");
+            
+            _context.Remove(filme);
+
+            return _context.SaveChanges() > 0;
+
         }
     }
 }

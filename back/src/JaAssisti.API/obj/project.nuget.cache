@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vEHtpnskIB4T2l/6pKupZNb5zM61RDU/XK8XEUkwRABme4BbIIoT6uo86iXQ3MdCuxVNY/URPZW4a5YsrkYSeA==",
+  "dgSpecHash": "SCN8NasFbt4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arthur Carvalho\\Desktop\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
+  "projectFilePath": "C:\\Users\\Arthur Carvalho\\Desktop\\AREA\\React_AspNetCore\\back\\src\\JaAssisti.API\\JaAssisti.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arthur Carvalho\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Arthur Carvalho\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
