@@ -32,7 +32,3 @@ Contribuições são bem-vindas! Se você tem alguma ideia de melhoria ou encont
 ## Licença
 
 Este projeto é de código aberto e pode ser usado sob a licença MIT.
-
----
-
-Agora o **README** reflete as funcionalidades do sistema e mantém o foco nas informações importantes, sem as instruções de instalação. O que acha dessa versão?
